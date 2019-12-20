@@ -1,14 +1,223 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://shixiangwang.github.io/home/">
-    <script type="text/javascript">
-        window.location.href = "https://shixiangwang.github.io/home/"
-    </script>
-    <title>Page Redirection</title>
-  </head>
-  <body>
-    If you are not redirected automatically, follow <a href='https://shixiangwang.github.io/home/'>this link</a>.
-  </body>
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+<title>S & R</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if lte IE 8]>
+    <script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+  <![endif]-->
+<!--<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">-->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link href="css/animate.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
+<link rel="stylesheet"  type="text/css" href="css/clip.css">
+</head>
+
+<body> 
+
+<!--===== Preloader ====-->
+<!--
+<div class="preloader" id="onlo">
+  <div class="spinner">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+</div>
+-->
+
+<!--/.header-->
+<div id="#top"></div>
+<section id="home">
+  <div class="banner-container">
+    <div class="container"> 
+      <div class="heading text-center"> 
+        <h2>Sheldon & Rainie</h2> 
+      <h3>Our fairy tales</h3>  <h5>On 24 Jun 2016</h5> </div>
+      <div class="countdown styled" id="elapseClock"></div>
+
+    </div>
+  </div>
+    <div class="web-content">
+  <section id="services">
+
+<div id="fh5co-couple-story">
+  <div class="container">
+        <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box fadeInUp animated-fast">
+          <h2>Our Story</h2>Human are nothing but a complex structure of all sorts of particles. what are the odds of us travalling trillions of years and bind together to feel each other? Rainie, Thank you for letting me know you and staying in my memory. It was worthy even if it takes all my fortune.</div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+
+  <div class="text-center clearfix container" id='sendAlert'>
+    <div class="funcBut">
+          <li class="glyphicon glyphicon-sort" onclick="reverseTime()"></li>
+      </div>    
+      <div class="funcBut" style="margin-left: 20px;" data-toggle="modal" data-target="#diaryModal">
+          <li class="glyphicon glyphicon-pencil" onclick="createDiary()"></li>
+      </div>
+    <div class="funcBut" style="margin-left: 20px;" data-toggle="modal" data-target="#settingModal">
+          <li class="glyphicon glyphicon-cog" onclick="createDiary()"></li>
+      </div>
+  </div> 
+
+
+
+  <div class="video-btn" id="video-btn">
+    <div class="video-area" id="video-area"></div>
+      <a class="video-shut" id="video-shut">×</a>
+    </div>
+  <div id="shadow"></div>
+
+<div id="fh5co-couple-story">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0">
+          <ul class="timeline animate-box" id="timelineStoryContent"></ul>
+                    <div class="sendbtn" style="margin-top: -10px;width: 150px;text-align: center;">To be continue...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--------------------------------------------- Diary form ----------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="diaryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" id="formClose" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="text-center" id="myModalLabel">Diary</h4>
+                </div>
+                
+                <!-- the actual form begins -->
+                <form id="contactus" method="post" action="send_mail.php" role="form">
+
+                    <div class="modal-body">
+                        
+                        <p class="text-center">Creat a new timeline date -- The stories goes on.</p>
+
+                        <!-- Title -->
+                        <div class="form-group">
+                            <label for="contactname">Title</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Give a brief introduction of the day" style="height: 10px;">
+                        </div><!-- /.form-group -->
+
+                        <!-- Diary -->
+                        <div class="form-group">
+                            <label for="contactmessage">Diary</label>
+                            <textarea class="form-control" rows="3" placeholder="Our diaries goes on here" id="diary" name="diary"></textarea>
+                        </div><!-- /.form-group -->
+
+            <!-- Secret code -->
+                        <div class="form-group">
+                            <label for="contactemail">Secret code</label>
+                            <input type="password" class="form-control" id="secretCode" name="secretCode" placeholder="" style="height: 10px;">
+                        </div><!-- /.form-group -->
+
+                          <input type="file" name="file" id = "lefile" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" style="display:none" onchange="imgPreview(this)" > 
+
+                          <div class="form-group">
+                            <label for="contactemail">Choose Photo</label>
+                          </div>
+
+
+                        <div class="file-box" onclick="$('input[id=lefile]').click();">
+                <img id="preview"> </img>
+
+            </div>
+                       
+                    </div><!-- /.modal-body -->
+                    <div class="modal-footer sendDiary" id='cf_submit_m'>
+                        <!-- SUBMIT BUTTON -->
+                        <input type="submit" value="Create" id="send_contact_message" class="sendbtn" >
+
+                    </div><!-- /.modal-footer -->
+                </form><!-- /.contactus -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+<!----------------------------------------- END Diary form ----------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------->
+
+        
+<!--------------------------------------- settingModal form ---------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="settingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div id="modal-dialog" class="modal-dialog" style="width: 80%;height: auto;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" id="formClose" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="text-center" id="myModalLabel">Settings</h4>
+                </div>
+        <div class="imageWallTitle">
+          <label >Choose wall photo</label>
+        </div>
+                
+        <div class="imageWallSettingFrame">
+          
+
+          <div id="test" class="addImg"></div>
+          
+
+          <input type="file" name="file" id = "picUp"  value="choose" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" style="display:none"  >
+
+        </div>
+        
+        <div class="modal-footer picSetFrame" id='cf_submit_m'><!-- SUBMIT BUTTON -->
+          <div class=" choosebtn" onclick="$('input[id=picUp]').click();">
+          <input type="submit" value="Choose" class="sendbtn"></div>
+          <input type="submit" value="confirm" class="sendbtn" id="upButton">
+        </div><!-- /.modal-footer -->
+
+                       
+      </div><!-- /.modal-body -->
+
+                </form><!-- /.contactus -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+<!----------------------------------------settingModal form----------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------->
+
+<script src="js/jquery-2.1.4.min.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery.Jcrop.js"></script>
+<script src="js/clip.js"></script>
+<script>
+  var test = document.getElementById("test");
+  var clipBox = new clipBox(test,document.body.clientWidth*0.38,document.documentElement.clientHeight*0.6,document.body.clientWidth*0.3,document.documentElement.clientHeight*0.50);
+</script>
+<script src="js/jquery.ui.widget.js"></script>
+<script src="js/jquery.iframe-transport.js"></script>
+<script src="js/jquery.fileupload.js"></script>
+
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/lovetime.js"></script>
+
+</body>
 </html>
