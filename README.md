@@ -1,2 +1,2 @@
 # STAFFD.github.io
- A page for Sheldon & Rainie
+ Sheldon's websites.
